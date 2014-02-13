@@ -268,9 +268,6 @@ static URI_INLINE const URI_CHAR * URI_FUNC(ParseAuthority)(URI_TYPE(ParserState
 		return URI_FUNC(ParseOwnHostUserInfoNz)(state, first, afterLast);
 
 	default:
-		/* "" regname host */
-		state->uri->hostText.first = URI_FUNC(SafeToPointTo);
-		state->uri->hostText.afterLast = URI_FUNC(SafeToPointTo);
 		return first;
 	}
 }
